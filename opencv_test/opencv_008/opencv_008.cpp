@@ -24,6 +24,9 @@ int main(int argc, char** argv)
 	rrt.angle = 45;
 	rrt.size = Size(100, 200);
 	ellipse(canvas,rrt,Scalar(0, 255,255),-1,LINE_8);//当线条选项为 -1  就代表填充
+	//在画布中添加文字
+	putText(canvas,"hello,cyssmile",Point(100,100),1,FONT_HERSHEY_PLAIN,
+			Scalar(0,255,0),1,LINE_8);
 	imshow("basic_demo", canvas);
 
 	//绘制随机图形
