@@ -1,0 +1,20 @@
+﻿  opencv_012.cpp
+d:\github\opencv_learning_notes\opencv_test\opencv_012\opencv_012.cpp(63): warning C4244: “参数”: 从“_Tp”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=float
+          ]
+          and
+          [
+              _Tp=int
+          ]
+d:\github\opencv_learning_notes\opencv_test\opencv_012\opencv_012.cpp(64): warning C4244: “参数”: 从“_Tp”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=float
+          ]
+          and
+          [
+              _Tp=int
+          ]
+  opencv_012.vcxproj -> D:\github\openCV_learning_notes\opencv_test\x64\Debug\opencv_012.exe
