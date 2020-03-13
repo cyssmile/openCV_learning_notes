@@ -48,6 +48,13 @@ int main(int argc, char** argv)
 	Mat dst;
 	blur(src,dst,Size(3,3),Point(1,1),BORDER_DEFAULT);
 
+	/*
+	* 对图片的边缘进行填充
+	*/
+	Mat dst1;
+	int board = 8;
+	copyMakeBorder(src,dst1,board,board,board,board,BORDER_CONSTANT,Scalar(0,0,255));
+	imshow("border_win", dst1);
 	namedWindow("dst_win", WINDOW_FREERATIO);
 	imshow("dst_win", dst);
 	
