@@ -5,8 +5,8 @@ using namespace cv;
 
 int main(int argc,char** argv) 
 {
-	//Mat original = imread("D:/images/test.jpg",IMREAD_GRAYSCALE);
-	Mat original = imread("D:/opencv/sources/samples/data/lena.jpg", IMREAD_GRAYSCALE);
+	Mat original = imread("D:/images/test.jpg",IMREAD_GRAYSCALE);
+	//Mat original = imread("D:/opencv/sources/samples/data/lena.jpg", IMREAD_GRAYSCALE);
 	namedWindow("input",WINDOW_FREERATIO);
 	imshow("input",original);
 	// get optimal DFT size
@@ -34,7 +34,7 @@ int main(int argc,char** argv)
 	split(dftAfter, originalComplex);
 
 	//Euler distance |C| = sqart(R^2 +I^2)
-	magnitude(originalComplex[0], originalComplex[0], originalComplex[1]);
+	magnitude(originalComplex[0], originalComplex[1], originalComplex[0]);
 	
 	//log(1 + sqart(R^2 +I^2))
 	Mat logReady = originalComplex[0];
