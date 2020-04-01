@@ -1,0 +1,12 @@
+﻿  opencv_041.cpp
+d:\github\opencv_learning_notes\opencv_test\opencv_041\opencv_041.cpp(28): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\github\opencv_learning_notes\opencv_test\opencv_041\opencv_041.cpp(29): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\github\opencv_learning_notes\opencv_test\opencv_041\opencv_041.cpp(30): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\github\opencv_learning_notes\opencv_test\opencv_041\opencv_041.cpp(31): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\github\opencv_learning_notes\opencv_test\opencv_041\opencv_041.cpp(65): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\github\opencv_learning_notes\opencv_test\opencv_041\opencv_041.cpp(67): warning C4244: “参数”: 从“double”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+  opencv_041.vcxproj -> D:\github\openCV_learning_notes\opencv_test\x64\Debug\opencv_041.exe
