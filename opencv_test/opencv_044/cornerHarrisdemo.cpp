@@ -3,6 +3,7 @@
 using namespace std;
 using namespace cv;
 void cornerHarrisDemo(Mat& images);
+void shitomasiDemo(Mat& images);
 int main(int argc,char** argv) 
 {
 	Mat original = imread("D:/images/tri.jpg",-1);
@@ -12,8 +13,8 @@ int main(int argc,char** argv)
 	}
 	namedWindow("input", WINDOW_FREERATIO);
 	imshow("input",original);
-	cornerHarrisDemo(original);
-
+	//cornerHarrisDemo(original);
+	shitomasiDemo(original);
 	waitKey(0);
 	destroyAllWindows();
 	return 0;
@@ -44,4 +45,22 @@ void cornerHarrisDemo(Mat& images) {
 	namedWindow("dst",WINDOW_FREERATIO);
 	imshow("dst", images);
 
+}
+
+void shitomasiDemo(Mat& images) {
+	Mat gray;
+	cvtColor(images,gray,COLOR_BGR2GRAY);
+
+	vector<Point2f> corners;
+	double quiltyLevel = 0.01;
+	goodFeaturesToTrack(gray,corners,3, quiltyLevel,10,Mat(),3,false,0.04);
+	RNG rng(12345);
+	for (int i = 0; i < corners.size(); i++) {
+		int b = rng.uniform(0, 255);
+		int g = rng.uniform(0, 255);
+		int r = rng.uniform(0, 255);
+		circle(images, corners[i], 2, Scalar(b, g, r), 2, 8);
+	}
+	namedWindow("GFTT",WINDOW_FREERATIO);
+	imshow("GFTT",images);
 }
