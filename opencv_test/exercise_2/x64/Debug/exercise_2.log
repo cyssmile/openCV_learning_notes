@@ -1,0 +1,5 @@
+﻿  exercise_2.cpp
+D:\github\openCV_learning_notes\opencv_test\exercise_2\exercise_2.cpp(16,35): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+D:\github\openCV_learning_notes\opencv_test\exercise_2\exercise_2.cpp(18,32): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+D:\github\openCV_learning_notes\opencv_test\exercise_2\exercise_2.cpp(21,33): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+  exercise_2.vcxproj -> D:\github\openCV_learning_notes\opencv_test\x64\Debug\exercise_2.exe
