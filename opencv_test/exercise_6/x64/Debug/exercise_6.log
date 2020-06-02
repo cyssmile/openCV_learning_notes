@@ -1,0 +1,84 @@
+﻿  exercise_6.cpp
+D:\github\openCV_learning_notes\opencv_test\exercise_6\exercise_6.cpp(21,16): warning C4244: “参数”: 从“double”转换到“const unsigned __int64”，可能丢失数据
+D:\github\openCV_learning_notes\opencv_test\exercise_6\exercise_6.cpp(42,17): warning C4018: “<”: 有符号/无符号不匹配
+D:\github\openCV_learning_notes\opencv_test\exercise_6\exercise_6.cpp(93,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\github\openCV_learning_notes\opencv_test\exercise_6\exercise_6.cpp(95,53): warning C4244: “参数”: 从“double”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+D:\github\openCV_learning_notes\opencv_test\exercise_6\exercise_6.cpp(96,47): warning C4244: “参数”: 从“double”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\utility(208,1): warning C4244: “初始化”: 从“_Ty”转换到“_Ty2”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
+          and
+          [
+              _Ty2=unsigned int
+          ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xmemory(670): message : 查看对正在编译的函数 模板 实例化“std::pair<const unsigned int,unsigned int>::pair<int,double,0>(std::pair<int,double> &&) noexcept”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xmemory(671): message : 查看对正在编译的函数 模板 实例化“std::pair<const unsigned int,unsigned int>::pair<int,double,0>(std::pair<int,double> &&) noexcept”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\list(585): message : 查看对正在编译的函数 模板 实例化“void std::_Default_allocator_traits<_Alloc>::construct<_Ty,std::pair<int,double>>(_Alloc &,_Objty *const ,std::pair<int,double> &&)”的引用
+          with
+          [
+              _Alloc=std::allocator<std::_List_node<std::pair<const unsigned int,unsigned int>,std::_Default_allocator_traits<std::allocator<std::pair<const unsigned int,unsigned int>>>::void_pointer>>,
+              _Ty=std::pair<const unsigned int,unsigned int>,
+              _Objty=std::pair<const unsigned int,unsigned int>
+          ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\list(587): message : 查看对正在编译的函数 模板 实例化“void std::_Default_allocator_traits<_Alloc>::construct<_Ty,std::pair<int,double>>(_Alloc &,_Objty *const ,std::pair<int,double> &&)”的引用
+          with
+          [
+              _Alloc=std::allocator<std::_List_node<std::pair<const unsigned int,unsigned int>,std::_Default_allocator_traits<std::allocator<std::pair<const unsigned int,unsigned int>>>::void_pointer>>,
+              _Ty=std::pair<const unsigned int,unsigned int>,
+              _Objty=std::pair<const unsigned int,unsigned int>
+          ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xhash(594): message : 查看对正在编译的函数 模板 实例化“std::_List_node_emplace_op2<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_List_node_emplace_op2<std::pair<int,double>>(_Alnode &,std::pair<int,double> &&)”的引用
+          with
+          [
+              _Ty=std::pair<const unsigned int,unsigned int>,
+              _Alloc=std::allocator<std::pair<const unsigned int,unsigned int>>,
+              _Alnode=std::allocator<std::_List_node<std::pair<const unsigned int,unsigned int>,std::_Default_allocator_traits<std::allocator<std::pair<const unsigned int,unsigned int>>>::void_pointer>>
+          ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xhash(627): message : 查看对正在编译的函数 模板 实例化“std::_List_node_emplace_op2<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_List_node_emplace_op2<std::pair<int,double>>(_Alnode &,std::pair<int,double> &&)”的引用
+          with
+          [
+              _Ty=std::pair<const unsigned int,unsigned int>,
+              _Alloc=std::allocator<std::pair<const unsigned int,unsigned int>>,
+              _Alnode=std::allocator<std::_List_node<std::pair<const unsigned int,unsigned int>,std::_Default_allocator_traits<std::allocator<std::pair<const unsigned int,unsigned int>>>::void_pointer>>
+          ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\unordered_map(222): message : 查看对正在编译的函数 模板 实例化“std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<_Ty>>>,bool> std::_Hash<std::_Umap_traits<_Kty,unsigned int,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,false>>::emplace<std::pair<int,double>>(std::pair<int,double> &&)”的引用
+          with
+          [
+              _Ty=std::pair<const unsigned int,unsigned int>,
+              _Kty=unsigned int,
+              _Hasher=std::hash<unsigned int>,
+              _Keyeq=std::equal_to<unsigned int>,
+              _Alloc=std::allocator<std::pair<const unsigned int,unsigned int>>
+          ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\unordered_map(222): message : 查看对正在编译的函数 模板 实例化“std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<_Ty>>>,bool> std::_Hash<std::_Umap_traits<_Kty,unsigned int,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,false>>::emplace<std::pair<int,double>>(std::pair<int,double> &&)”的引用
+          with
+          [
+              _Ty=std::pair<const unsigned int,unsigned int>,
+              _Kty=unsigned int,
+              _Hasher=std::hash<unsigned int>,
+              _Keyeq=std::equal_to<unsigned int>,
+              _Alloc=std::allocator<std::pair<const unsigned int,unsigned int>>
+          ]
+D:\github\openCV_learning_notes\opencv_test\exercise_6\exercise_6.cpp(46): message : 查看对正在编译的函数 模板 实例化“std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<_Ty>>>,bool> std::unordered_map<unsigned int,unsigned int,std::hash<unsigned int>,std::equal_to<unsigned int>,std::allocator<_Ty>>::insert<std::pair<int,double>,0>(_Valty &&)”的引用
+          with
+          [
+              _Ty=std::pair<const unsigned int,unsigned int>,
+              _Valty=std::pair<int,double>
+          ]
+D:\github\openCV_learning_notes\opencv_test\exercise_6\exercise_6.cpp(46): message : 查看对正在编译的函数 模板 实例化“std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<_Ty>>>,bool> std::unordered_map<unsigned int,unsigned int,std::hash<unsigned int>,std::equal_to<unsigned int>,std::allocator<_Ty>>::insert<std::pair<int,double>,0>(_Valty &&)”的引用
+          with
+          [
+              _Ty=std::pair<const unsigned int,unsigned int>,
+              _Valty=std::pair<int,double>
+          ]
+  exercise_6.vcxproj -> D:\github\openCV_learning_notes\opencv_test\x64\Debug\exercise_6.exe
