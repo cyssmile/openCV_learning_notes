@@ -1,0 +1,5 @@
+﻿  exercise9.cpp
+D:\github\openCV_learning_notes\opencv_test\exercise9\exercise9.cpp(129,43): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+D:\github\openCV_learning_notes\opencv_test\exercise9\exercise9.cpp(137,41): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+D:\github\openCV_learning_notes\opencv_test\exercise9\exercise9.cpp(144,41): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+  exercise9.vcxproj -> D:\github\openCV_learning_notes\opencv_test\x64\Debug\exercise9.exe
