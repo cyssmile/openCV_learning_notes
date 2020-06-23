@@ -1,0 +1,7 @@
+﻿  main.cpp
+D:\github\openCV_learning_notes\opencv_test\exercise_10\main.cpp(232,30): warning C4244: “=”: 从“double”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=float
+          ]
+  exercise_10.vcxproj -> D:\github\openCV_learning_notes\opencv_test\x64\Debug\exercise_10.exe
