@@ -12,9 +12,11 @@ void changeQuadrant(Mat& source);
 void make_ILPE_filter(int width, int height, double D0, Mat& dst);
 void make_IHPE_filter(int width, int height, double D0, Mat& dst);
 void make_BHPF_filter(int width, int height, double D0, double n, Mat& dst);
+void make_BIPF_filter(int width, int height, double D0, double n, Mat& dst);
 void iILPF(Mat& src, Mat& dst,double D0);
 void iHLPF(Mat& src, Mat& dst, double D1);
 void iBHPF(Mat& src, Mat& dst, double D1, double n);
+void iBIPF(Mat& src, Mat& dst, double D1, double n);
 
 int main(int argc, char** argv)
 {
@@ -33,7 +35,7 @@ int main(int argc, char** argv)
 
 	Mat destination;
 	takeDFT(original, destination);
-
+	//showDFT(destination);
 	//低通滤波ILPF
 	/*
 	Mat dst;
@@ -50,11 +52,21 @@ int main(int argc, char** argv)
 	*/
 
 	//布特沃斯高通滤波器
+	/*
 	Mat dst2;
 	int n = 2;
-	double D2 = 30;
+	double D2 = 10;
 	iBHPF(destination, dst2, D2, n);
-	//showDFT(destination);
+	*/
+
+	//布特沃斯低通滤波器
+
+	Mat dst3;
+	int n = 2;
+	double D3 = 60;
+	iBIPF(destination, dst3, D3, n);
+
+	
 	waitKey(0);
 	destroyAllWindows();
 	return 0;
@@ -256,4 +268,46 @@ void iBHPF(Mat& src, Mat& dst, double D1,double n)
 
 	dft(idft, dst, DFT_INVERSE | DFT_REAL_OUTPUT | DFT_SCALE);
 	imshow("布特沃斯高通滤波", dst);
+}
+
+void make_BIPF_filter(int width, int height, double D0, double n, Mat& dst)
+{
+	dst = Mat::ones(Size(width, height), CV_32F);
+	double D0_2 = pow(D0, 2);
+	double half_h = height * (1.0) / 2;
+	double half_w = width * (1.0) / 2;
+	//布特沃斯低通滤波器
+	for (int i = 0; i < height; i++)
+	{
+		for (int j = 0; j < width; j++)
+		{
+			double distance = pow((half_h - (double)i), 2) + pow((half_w - (double)j), 2);
+			double temp = pow(sqrt(distance)/D0, 2 * n);
+			dst.at<float>(i, j) = 1.0 / (1.0 + temp);
+		}
+	}
+}
+
+void iBIPF(Mat& src, Mat& dst, double D1, double n)
+{
+	//这里输入的src是刚通过DFT处理后的Mat 并没有进行其他的处理
+	//先将低频高亮部分移到中间
+	changeQuadrant(src);
+	Mat ifilter;
+	make_BIPF_filter(src.cols, src.rows, D1, n, ifilter);
+
+	Mat sourceComplex[2];
+	split(src, sourceComplex);
+
+	Mat temp[2];
+	multiply(sourceComplex[0], ifilter, temp[0]);
+	multiply(sourceComplex[1], ifilter, temp[1]);
+
+	Mat idft;
+	merge(temp, 2, idft);
+	//转换回相应的象限
+	changeQuadrant(idft);
+
+	dft(idft, dst, DFT_INVERSE | DFT_REAL_OUTPUT | DFT_SCALE);
+	imshow("布特沃斯低通滤波", dst);
 }
